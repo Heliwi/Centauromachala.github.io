@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centauromachala - Sellos">
+    <title>Catálogo - Sellos Personalizados | Centauromachala</title>
+    <link rel="stylesheet" href="estilocatalogo.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>Centauromachala - Sellos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="informacion.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de productos -->
+    <section class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-lista">
+            <!-- Sello Shiny -->
+            <div class="producto">
+                <img src="S722.jpeg" alt="S-722">
+                <h3>Sello de Bolsillo Shiny S-722</h3>
+                <p class="precio">$12.00</p>
+                <button onclick="agregarCarrito('Sello Automático Shiny S-722', 12.00)">Añadir al Carrito</button>
+            </div>
+            <!-- Sello Colop -->
+            <div class="producto">
+                <img src="p20.jpeg" alt="P20">
+                <h3>Sello de Bolsillo Colop P20</h3>
+                <p class="precio">$15.00</p>
+                <button onclick="agregarCarrito('Sello de Bolsillo Colop P20', 15.00)">Añadir al Carrito</button>
+            </div>
+            <!-- Sello Trodat -->
+            <div class="producto">
+                <img src="9511.jpeg" alt="9511">
+                <h3>Sello de Bolsillo Trodat 9511</h3>
+                <p class="precio">$15.00</p>
+                <button onclick="agregarCarrito('Sello de Bolsillo Trodat 9511', 15.00)">Añadir al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito de compras -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="listaCarrito">
+            <!-- Elementos del carrito se agregan aquí dinámicamente -->
+        </ul>
+        <p>Total: $<span id="totalCarrito">0.00</span></p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="formularioContacto" onsubmit="enviarFormulario(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+<br>        
+</form>
+    </section>
+<br>
+<br>
+<br>
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Centauromachala-Sellos. Todos los derechos reservados.</p>    
+</footer>
+    <script src="carrito.js"></script>
+</body>
+</html>
